@@ -1,0 +1,54 @@
+//
+//  ModelFile.swift
+//  MoviesAndSeries
+//
+//  Created by Furkan Sepetci on 20.08.2022.
+//
+
+import Foundation
+import SwiftUI
+
+struct Model : Identifiable {
+    var id = UUID()
+    var title : String
+    var elements : [Elements]
+    
+}
+
+struct Elements : Identifiable {
+    var id = UUID()
+    var name : String
+    var imageName : String
+    var description : String
+    var userScore : Float
+    
+}
+
+let godFather = Elements(name: "The Godfather (1972)", imageName: "The Godfather (1972)", description: "The Godfather traces the arc of this doomed idealism with a beauty that is still fresh.", userScore: 9.2)
+let citizenKane = Elements(name: "Citizen Kane (1941)", imageName: "Citizen Kane  (1941)", description: "What's magical about Kane — the sheer transformative thrill of invention — is there in every shot, every performance, every narrative surge.", userScore: 8.5)
+let rearWindow = Elements(name: "Rear Window (1954)", imageName: "Rear Window (1954)", description: "There is never an instant, in fact, when Director Hitchcock is not in minute and masterly control of his material: script, camera, cutting, props, the handsome set constructed from his ideas, the stars he has Hitched to his vehicle.", userScore: 8.8)
+let casablanca = Elements(name: "Casablanca (1943)", imageName: "Casablanca (1943)", description: "The dialogue is so spare and cynical it has not grown old-fashioned. Much of the emotional effect of Casablanca is achieved by indirection; as we leave the theater, we are absolutely convinced that the only thing keeping the world from going crazy is that the problems of three little people do after all amount to more than a hill of beans.", userScore: 8.9)
+let boyhood = Elements(name: "Boyhood (2014)", imageName: "Boyhood (2014)", description: "On rare occasions a movie seems to channel the flow of real life. Boyhood is one of those occasions. In its ambition, which is matched by its execution, Richard Linklater's endearing epic is not only rare but unique.", userScore: 7.6)
+let threeColorsRed = Elements(name: "Three Colors Red (1994)", imageName: "Three Colors Red (1994)", description: "It is a film of much humanity and very far from smart European pap. But the external brilliance of its making does at times subvert its inner workings, as if its manufacture and its meaning were not quite in perfect harmony.", userScore: 8.8)
+let vertigo = Elements(name: "Vertigo (1958)", imageName: "Vertigo (1958)", description: "The greatest sexual suspense drama ever made has come to be regarded by many Hitchcock admirers as his most accomplished film. It is certainly his most forlorn, and easily his most mesmerizing.", userScore: 8.8)
+let notorious = Elements(name: "Notorious (1946)", imageName: "Notorious (1946)", description: "Love is a dark, corroded obsession in Alfred Hitchcock's Notorious, a black-velvet biocide brimming with notes of tabloid titillation, spy-versus-spy nonsense, and romance as rotten as a half-eaten Granny Smith left out in the summer sun.", userScore: 8.0)
+let singinInTheRain = Elements(name: "Singin' In The Rain (1952)", imageName: "Singin' In The Rain (1952)", description: "Escapism raised to the level of art, Singin' In The Rain inventively satirizes the illusions of the filmmaking process while celebrating their life-affirming joy.", userScore: 8.8)
+let cityLights = Elements(name: "City Lights (1931)", imageName: "City Lights (1931)", description: "There's dignity and folly to The Tramp in City Lights, and everything in between.", userScore: 9.0)
+
+let favoriteMovies = Model(title: "Favorite Movies", elements: [godFather,citizenKane,rearWindow,casablanca,boyhood,threeColorsRed,vertigo,notorious,singinInTheRain,cityLights])
+
+
+let friends = Elements(name: "Friends (1994-2004)", imageName: "Friends (1994-2004)", description: "For a long time, Friends was pretty much the biggest show in the world. Millions tuned in each week to see what Rachel, Ross, Joey, Chandler, Phoebe, and Monica were up to to the point where the cast was able to band together and get contracts at values that were unheard of.To this day, Friends is still among the most watched shows whether it be through easy-to-consume reruns or on streaming services. The recent reunion special was also a pretty big hit, showing that this series is basically timeless.", userScore: 8.9)
+let breakingBad = Elements(name: "Breaking Bad (2008-2013)", imageName: "Breaking Bad (2008-2013)", description: "There may have never been a more tightly written drama in the history of television. For five seasons, Breaking Bad made sure every scene in every episode mattered and built towards something. The show told the story of Walter White, a chemistry teacher diagnosed with cancer, who partners with his former student to cook and sell meth.Watching White become hungry with power and get driven to do terrible things made for one of the most interesting character arcs ever witnessed. Bryan Cranston and Aaron Paul won several awards for their incredible portrayals of the two lead characters. Throughout its entire run, Breaking Bad never experienced a dip in quality.", userScore: 9.5)
+let bandOfBrothers = Elements(name: "Band Of Brothers (2001)", imageName: "Band Of Brothers (2001)", description: "The scope of Band of Brothers was wildly impressive. The HBO miniseries lasted ten episodes and had a budget of $125 million that you would expect from a blockbuster motion picture. Based on the 1992 book of the same name, it dramatized the history of a United States Army platoon during World War II.It helped that the miniseries was created by Steven Spielberg and Tom Hanks, who had collaborated on the critically acclaimed World War II film Saving Private Ryan. They nailed all the aspects they needed to and gave viewers an experience that felt authentic. Band of Brothers took home both the Emmy and Golden Globe for Best Miniseries.", userScore: 9.4)
+let chernobyl = Elements(name: "Chernobyl (2019)", imageName: "Chernobyl (2019)", description: "Another HBO production, Chernobyl, was a 2019 five-episode miniseries depicting the 1986 nuclear disaster and the excruciating cleanup that followed. This is not a show you binge watch due to the heavy nature of the subject matter.Chernobyl is a fascinating nightmare of a mystery, but its real strength lies in how it portrayed the danger and agony that comes with radiation. It managed to work as both a tragedy and a tribute to those who lost their lives in this event. Fans and critics lauded the miniseries.", userScore: 9.4)
+let theWire = Elements (name: "The Wire (2002-2008)", imageName: "The Wire (2002-2008)", description: "Back to the world of HBO for The Wire. Set in Baltimore, it surrounded the intertwining lives of law enforcement and criminals and realistically told the story. The creator of the show, David Simon, had experience as a journalist for the Baltimore Sun, which played a part in why the show felt so honest and raw.", userScore: 9.3)
+let avatar = Elements(name: "Avatar The Last Airbender (2005-2008)", imageName: "Avatar The Last Airbender (2005-2008)", description: "You may be surprised to find a Nickelodeon show among the best. You'd be even more stunned if you only knew of Avatar: The Last Airbender from the widely panned film made by M. Night Shyamalan. The show included 61 episodes, gaining all sorts of praise.Avatar: The Last Airbender followed the adventures of a young boy on a quest to fulfill his destiny as the Avatar, which would bring peace to a warring world filled with elemental magic. It was more advanced than your typical Nickelodeon show, with viewers celebrating its art direction, action, humor, and character development. If only the 2010 film could have captured the magic.", userScore: 9.3)
+let gameOfThrones = Elements(name: "Game Of Thrones (2011-2019)", imageName: "Game Of Thrones (2011-2019)", description: "It's the most ambitious television show ever created. Game of Thrones was an epic scale series that ranked among the most expensive in history. More often than not, a fantasy story like this wouldn't catch on with the masses, but it became a crossover hit that broke ratings records.Game of Thrones gave us iconic characters like Jon Snow, Daenerys Targaryen, and Arya Stark. It also provided us with unforgettable moments like the infamous Red Wedding and the Hodor origin story. The final season wasn't well-received, and had this ended stronger; it would've probably ranked higher. Regardless of feelings about the ending, Game of Thrones was a remarkable accomplishment and one of the most decorated shows of all time.", userScore: 9.3)
+let rickAndMorty = Elements(name: "Rick And Morty (2013-Present)", imageName: "Rick And Morty (2013-Present)", description: "Here we have our second animated entry. Airing on Cartoon Network's Adult Swim network, Ricky and Morty is the definition of a cultural phenomenon. The show centers around a mad scientist (Rick) and his grandson (Morty), as they go on wacky interdimensional adventures. It always leaves fans wanting more, taking lengthy breaks in between seasons.", userScore: 9.2)
+let theSopranos = Elements(name: "The Sopranos (1999-2007)", imageName: "The Sopranos (1999-2007)", description: "Get ready for a lot of HBO on this list. This intense series followed the story of a New Jersey mob boss as he dealt with balancing his family issues and his business problems, all while seeking psychiatric help. The Sopranos was groundbreaking, especially when it premiered back in 1999.Led by the excellent performances from the likes of  James Gandolfini and Edie Falco, The Sopranos took the world by storm. It was almost always mired in some controversy, yet people kept coming back for more. During its run, the show racked up the awards, including over 20 Emmys.", userScore: 9.2)
+let sherlock = Elements(name: "Sherlock (2010-2017)", imageName: "Sherlock (2010-2017)", description: "Sherlock Holmes is a character who has had his story told in a variety of mediums. There are books and films, as well as the CBS show Elementary. However, it's the BBC version simply titled Sherlock that scored highest on IMDB. This is what launched the successful careers of Benedict Cumberbatch and Martin Freeman, who are both beloved as Sherlock and Watson.Every episode lasts about 90 minutes, making each mystery Sherlock uncovers feel like a film. It is masterfully shot, brilliantly acted, and features some plot twists that will leave you yearning for more. The series 2 episode, The Reichenbach Fall, was met with critical praise and spawned months of online speculation about the big twist ending, proving how impactful Sherlock is to its fans.", userScore: 9.1)
+
+let favoriteSeries = Model(title: "Favorite Series", elements: [friends,breakingBad,bandOfBrothers,chernobyl,theWire,avatar,gameOfThrones,rickAndMorty,theSopranos,sherlock])
+
+let myFavorites = [favoriteMovies,favoriteSeries]
